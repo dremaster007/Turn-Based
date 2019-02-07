@@ -13,8 +13,7 @@ __meta__ = {
 
 [node name="Tile1" type="StaticBody2D" parent="Node2D" index="0"]
 
-editor/display_folded = true
-position = Vector2( -1, -1 )
+position = Vector2( 110, 100 )
 scale = Vector2( 0.96875, 0.96875 )
 input_pickable = false
 collision_layer = 1
@@ -39,5 +38,49 @@ position = Vector2( 4.56432, 0 )
 scale = Vector2( 0.912863, 0.956938 )
 build_mode = 0
 polygon = PoolVector2Array( -59.7727, 94.05, 49.7727, 94.05, 105, 0, 49.7727, -94.05, -59.7727, -94.05, -114.545, 0 )
+
+[node name="Up" type="RayCast2D" parent="Node2D/Tile1" index="2"]
+
+scale = Vector2( 1, 1 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, -200 )
+collision_mask = 1
+
+[node name="Down" type="RayCast2D" parent="Node2D/Tile1" index="3"]
+
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 200 )
+collision_mask = 1
+
+[node name="UpLeft" type="RayCast2D" parent="Node2D/Tile1" index="4"]
+
+scale = Vector2( 1, 1 )
+enabled = false
+exclude_parent = true
+cast_to = Vector2( -160, -100 )
+collision_mask = 1
+
+[node name="UpRight" type="RayCast2D" parent="Node2D/Tile1" index="5"]
+
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 160, -100 )
+collision_mask = 1
+
+[node name="DownRight" type="RayCast2D" parent="Node2D/Tile1" index="6"]
+
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 160, 100 )
+collision_mask = 1
+
+[node name="DownLeft" type="RayCast2D" parent="Node2D/Tile1" index="7"]
+
+enabled = false
+exclude_parent = true
+cast_to = Vector2( -160, 100 )
+collision_mask = 1
 
 
