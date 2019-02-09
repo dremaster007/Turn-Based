@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Graphics/icon.png" type="Texture" id=2]
+
+[node name="Player" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -80.9774, 0.745323, -41.5701, -68.3233, 35.8886, -68.0092, 75.5601, 1.28493, 35.2606, 69.9511, -41.7129, 70.0511 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_Player_mouse_entered"]
+
+
